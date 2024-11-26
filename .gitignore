@@ -1,6 +1,8 @@
 # Data Files
-*.txt
 *.csv
+
+# Text files
+StudentPerformanceFactors.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
