@@ -34,7 +34,7 @@ This project aims to use machine learning regression models to predict a student
 ## Project Highlights:
 
 - Analyzed Student Performance Factors for predicting the exam score of a student.
-- Built a machine learning model using Linear Regression, Lasso Regression Ridge Regression and the Random Forest Regressor but selected the Linear Regression Model which achieved the lowest `RMSE of 2.046497` showing how far the model's predictions are from the actual values and the highest score of `R² score of 0.730480` which is indicating the proportion of variance explained in the target by the predictor variables.
+- Built a machine learning model using Linear Regression, Lasso Regression Ridge Regression and the Random Forest Regressor but selected the <b>Linear Regression Model</b> which achieved the lowest <b>RMSE</b> of `2.046497` showing how far the model's predictions are from the actual values and the highest score of <b>R²</b> score of `0.730480` which is indicating the proportion of variance explained in the target by the predictor variables.
 - This model can be used for Potential  help educators and policymakers implement targeted interventions that can enhance learning outcomes
 
 ## Data Sources:
