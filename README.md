@@ -54,8 +54,10 @@ Libraries: scikit-learn, pandas, numpy, seaborn, matplotlib, statsmodels
 
 * cd `Predicting-Student-Performance`
 
-* create new env with python 3 and activate it .
+* create new env with python 3 and activate it `(virtualenv venv & venv\scripts\activate)`.
 
 * Install the required packages using pip install -r requirements.txt
 
-* Use this notebook: `python main.ipynb`
+* Execute the command: python app.py
+
+* Open http://127.0.0.1:5000/ in your browser.
