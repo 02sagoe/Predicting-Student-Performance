@@ -3,14 +3,13 @@ import requests
 import pickle
 import numpy as np
 import sklearn
-from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
-model = pickle.load(open('', 'rb'))
+model = pickle.load(open('model.pkl', 'rb'))                         
 
-@app.route('/',methods=['GET'])
-def Home():model.pkl
-return render_template('index.html')
+@app.route('/', methods= ['GET'])
+def Home():
+    return render_template('index.html')
 
 @app.route("/predict", methods=['POST'])
 def predict():
@@ -27,16 +26,16 @@ def predict():
         parental_education_level=request.form['Parental_Education_Level']
         if(parental_education_level=='Postgraduate'):
             parental_education_level_postgraduate=1
-            parental_education_level_highschool=0
+            parental_education_level_high_school=0
         elif(parental_education_level=='High School'):
             parental_education_level_postgraduate=0
-            parental_education_level_highschool=1
+            parental_education_level_high_school=1
         else:
             parental_education_level_postgraduate=0
-            parental_education_level_highschool=0
+            parental_education_level_high_school=0
         
         distance_from_home=request.form['Distance_from_Home']
-        if(distance_from_home_near=='Near'):
+        if(distance_from_home=='Near'):
             distance_from_home_near=1
             distance_from_home_moderate=0
         elif(distance_from_home_moderate=='Moderate'):
