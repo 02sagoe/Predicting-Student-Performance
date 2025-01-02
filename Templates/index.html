@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Prediction</title>
+</head>
+    
+<body>
+
+ <div class="regform"><h1>Student Performance Prediction</h1></div>
+        <div class="main">
+        <form action="{{url_for('predict')}}" method="post">
+          <div id="name">  
+                          
+            <h3 id= "ques">What are the Class Attendance Scores of the Student?</h3>
+            <input id="resea" name="Attendance" placeholder= "Attendance" required="required">
+            
+            <h3 id= "ques">How many Hours does the Student Study?</h3>
+            <input id="resea" name="Hours_studied" placeholder= "Hours Studied" required="required">
+
+            <h3 id="ques">What was the Students Previous Scores?:</h3>
+            <input id="resea" name="Previous_Scores" placeholder="Previous Scores" required="required">
+
+            <h3 id="ques">How many Tutoring Sessions does the Student have (per week)?:</h3>
+            <select name="Tutoring_Sessions" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select>
+
+            <h3 id="ques">What is your (Guardian/Parent) Education Level?:</h3>
+            <select name="Parental_Education_Level" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="High School">High School</option>
+                <option value="College">College</option>
+                <option value="Postgraduate">Postgraduate</option>
+            </select>
+
+            <h3 id="ques">What is the Students Distance from Home?:</h3>
+            <select name="Distance_from_Home" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Near">Near</option>
+                <option value="Moderate">Moderate</option>
+                <option value="Far">Far</option>
+            </select>
+
+            <h3 id="ques">Does the Student do any Extracurricular Activities?:</h3>
+            <select name="Extracurricular_Activities" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <h3 id="ques">Does the Student have Internet Access?:</h3>
+            <select name="Internet_Access" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <h3 id="ques">How many days of Physical Activity does the Student partake in (per week)?:</h3>
+            <select name="Physical_Activity" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+            </select>
+
+            <h3 id="ques">Whats is the Income of the Students Family?:</h3>
+            <select name="Family_Income" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <h3 id="ques">What is the Students level of Access to Resources?:</h3>
+            <select name="Access_to_Resources" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <h3 id="ques">What is the level of Parental Involvement for the Student?:</h3>
+            <select name="Parental_Involvement" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <h3 id="ques">What is the Quality of the Student's Teachers?:</h3>
+            <select name="Teacher_Quality" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <h3 id="ques">What is the Student's Motivation Level?:</h3>
+            <select name="Motivation_Level" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+
+            <h3 id="ques">Does the Student have any Learning Disabilities?:</h3>
+            <select name="Learning_Disabilities" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            
+            <h3 id="ques">What is the Level of Peer Influence on the Student?:</h3>
+            <select name="Peer_Influence" id="resea" required="required">
+                <option disabled="disabled" selected="selected">--Choose Option--</option>
+                <option value="Positive">Positive</option>
+                <option value="Negative">Negative</option>
+                <option value="Neutral">Neutral</option>
+            </select><br>
+
+            <button id="sub" type="submit">Predict</button>
+            <br>
+        
+            <h3 id="score"></h3>
+       
+        </div>            
+    </form>        
+    </div>
+        <br><br>
+        <p class='footer-description'>©2024 Kojo Sagoe</p>
+    
+    <style>
+
+/* Center and scale the image nicely */     
+        body {
+            
+            text-align: center;
+            padding: 10px
+        }
+        
+        .regform {
+                width:800px;               
+                background-color:rgba(128, 133, 130, 0.8);
+                margin:auto;
+                color:#FFFFFF;
+                padding:10px 0px 10px 0px;
+                text-align:center;
+                border-radius:15px 15px 0px 0px;
+        }
+
+        .main{
+            background-color:rgba(97, 107, 102, 0.7);
+            width:800px;
+            height:2400px;
+            margin:auto;
+            border-radius:0px 0px 20px 20px;
+        }
+
+        form{
+            padding:30px;
+        }
+
+        #name{
+            width:100%;
+            height:1030px;
+        }
+        
+        
+        #box {
+            border-radius: 60px;
+            border-style: solid;
+            text-align: center;
+            width: 1100px;
+            height: 950px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 18px;
+        }
+        
+        #resea {
+            width: 30%;
+            height: 43px;
+            text-align: center;
+            border-radius: 60px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        
+        #resea:hover {
+            background-color: white;
+        }
+        
+        #sub {
+            width: 20%;
+            height: 45px;
+            background-color: rgb(140, 147, 147);
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+            margin-top: 40px;
+        }
+        
+        #sub:hover {
+            background-color: blue;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25;
+            font-size: 18px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        #ques{
+            font-size: 20px;
+        }
+        
+        #score {
+            color: white;
+            font-weight: 400;
+            margin-left: 31%;
+            text-align: center;
+            padding: 1%;
+            width: 35%;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        
+        .footer-description {
+            color: rgb(22, 21, 21);
+            padding: 0px
+        }        
+        
+    </style>
+    
+    
+</body>
+    
+</html>
