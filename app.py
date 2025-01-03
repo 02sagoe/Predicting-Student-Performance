@@ -40,7 +40,7 @@ def predict():
         if(distance_from_home=='Near'):
             distance_from_home_near=1
             distance_from_home_moderate=0
-        elif(distance_from_home_moderate=='Moderate'):
+        elif(distance_from_home=='Moderate'):
             distance_from_home_near=0
             distance_from_home_moderate=1
         else:
